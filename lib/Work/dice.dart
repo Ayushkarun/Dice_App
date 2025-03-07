@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dice_icons/dice_icons.dart';
 
 class Dice extends StatelessWidget {
   const Dice({super.key});
@@ -6,11 +7,9 @@ class Dice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-      ),
-  body: Dicepage(),
+      backgroundColor: Colors.white,
+      appBar: AppBar(backgroundColor: Colors.white),
+      body: Dicepage(),
     );
   }
 }
@@ -20,16 +19,25 @@ class Dicepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          height: 150.0,
-          width: 150.0,
-          child: TextButton(
-            onPressed: (){},
+    return Center(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            height: 150.0,
+            width: 150.0,
+            child: TextButton(
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white),
+              onPressed: () {},
+              child: Center(child: Icon(DiceIcons.dice1,
+               size: 100.0,
+               color: Colors.black,)
+               ),
+            ),
           ),
-        )
-      ],
+        ],
+      ),
     );
   }
 }
